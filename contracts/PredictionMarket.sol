@@ -5,6 +5,21 @@ import "./StakingToken.sol";
 
 contract PredictionMarket {
 
+
+    struct PredictionTopic {
+        string memory title;
+        string memory description;
+        uint stakingPrice;  // Define price of staking token which need to stake for topic
+    }
+    
+
+    struct Participant {
+        address addr;
+        uint stakingTokenBalance;  // Balance of staking token
+    }
+    
+
+
     StakingToken public stakingToken;
 
 
@@ -20,6 +35,6 @@ contract PredictionMarket {
     }
 
 
-
+    
 
 }

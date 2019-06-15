@@ -7,6 +7,7 @@ import "openzeppelin-solidity-2.1.1/contracts/token/ERC20/ERC20Mintable.sol";
 import "openzeppelin-solidity-2.1.1/contracts/token/ERC20/ERC20Burnable.sol";
 
 
+/* @dev Transfer inter-staking-token when participants join some prediction of topic */
 contract StakingToken is ERC20, ERC20Detailed, ERC20Mintable, ERC20Burnable {
 
     constructor (
