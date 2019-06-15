@@ -70,10 +70,10 @@ contract PredictionMarket {
         uint _predictionTopicId, 
         address _participantAddr, 
         uint _stakingTokenBalance
-    ) 
+    )
         public returns (bool res) 
-    {
-        require (_stakingTokenBalance > 0);  // Check that whether participant who bought staking token already or not
+    {        
+        require (_stakingTokenBalance > 0, "You have to buy staking token");  // Check that whether participant who bought staking token already or not
         // in progress      
     }
                 
