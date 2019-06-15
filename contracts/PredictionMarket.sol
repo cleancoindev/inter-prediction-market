@@ -12,6 +12,7 @@ contract PredictionMarket {
         string title;
         string description;
         uint stakingPrice;  // Define price of staking token which need to stake for topic
+        address creator;
     }
     PredictionTopic[] public predictionTopics;
     
@@ -40,7 +41,15 @@ contract PredictionMarket {
     }
 
 
-    function createPredictionTopic() public returns (bool res) {
+    function createPredictionTopic(
+        uint _predictionTopicId, 
+        string memory _title,
+        string memory _description,
+        uint _stakingPrice,
+        address _creator
+    ) 
+        public returns (bool res) 
+    {
         // in progress
     }    
 
