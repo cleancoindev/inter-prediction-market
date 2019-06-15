@@ -18,7 +18,7 @@ contract PredictionMarket {
     
 
     struct Participant {
-        address addr;
+        address participantAddr;
         uint stakingTokenBalance;  // Balance of staking token
     }
     Participant[] public participants;
@@ -51,6 +51,20 @@ contract PredictionMarket {
         public returns (bool res) 
     {
         // in progress
-    }    
+        predictionTopicId++;
+    }
+
+
+
+    function registerParticipant(
+        address _participantAddr,
+        uint _stakingTokenBalance
+    ) 
+        public returns (bool res) 
+    {
+        // in progress
+        participantId++;
+    }
+      
 
 }
