@@ -5,22 +5,27 @@ import "./StakingToken.sol";
 
 contract PredictionMarket {
 
+    uint predictionTopicId;
+    uint participantId;
 
     struct PredictionTopic {
-        string memory title;
-        string memory description;
+        string title;
+        string description;
         uint stakingPrice;  // Define price of staking token which need to stake for topic
     }
+    PredictionTopic[] public predictionTopics;
     
 
     struct Participant {
         address addr;
         uint stakingTokenBalance;  // Balance of staking token
     }
-    
+    Participant[] public participants;
 
 
     StakingToken public stakingToken;
+
+    event TransferStakingToken(address stakingToken, uint predictionContentId, address participant, uint amount);
 
 
     constructor (address _stakingTokenAddress) public {
@@ -35,6 +40,8 @@ contract PredictionMarket {
     }
 
 
-    
+    function createPredictionTopic() public returns (bool res) {
+        // in progress
+    }    
 
 }
