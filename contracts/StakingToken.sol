@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 
-contract StakingToken {
+contract PredictionMarket {
 
     constructor () public {
         // in progress
