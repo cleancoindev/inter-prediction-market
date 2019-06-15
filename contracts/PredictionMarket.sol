@@ -14,8 +14,12 @@ contract PredictionMarket {
     } 
 
 
-    function testFunc(address to, uint256 value) public returns (bool) {
-        return true;
+    /* @dev Transfer staking token when participants join some prediction of topic */
+    function transferStakingToken(address _stakingTokenAddress, uint _predictionContentId, address _participant, uint _amount) public returns (bool) {
+        emit TransferStakingToken(_stakingTokenAddress, _predictionContentId, _participant, _amount);
     }
+
+
+
 
 }
