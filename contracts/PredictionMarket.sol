@@ -55,7 +55,6 @@ contract PredictionMarket {
     }
 
 
-
     function registerParticipant(
         address _participantAddr,
         uint _stakingTokenBalance
@@ -65,6 +64,18 @@ contract PredictionMarket {
         // in progress
         participantId++;
     }
-      
+
+
+    function votingToPredictionTopic(
+        uint _predictionTopicId, 
+        address _participantAddr, 
+        uint _stakingTokenBalance
+    ) 
+        public returns (bool res) 
+    {
+        require (_stakingTokenBalance > 0);  // Check that whether participant who bought staking token already or not
+        // in progress      
+    }
+                
 
 }
