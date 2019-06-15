@@ -36,7 +36,15 @@ contract PredictionMarket {
 
 
     /* @dev Transfer staking token when participants join some prediction of topic */
-    function transferStakingToken(address _stakingTokenAddress, uint _predictionContentId, address _participant, uint _amount) public returns (bool) {
+    function transferStakingToken(
+        address _stakingTokenAddress, 
+        uint _predictionContentId, 
+        address _participant, 
+        uint _amount
+    ) 
+        public returns (bool) 
+    {
+        // @Todo: Add codes for sending address of any cripto currency to the contract address of StakingToken
         emit TransferStakingToken(_stakingTokenAddress, _predictionContentId, _participant, _amount);
     }
 
