@@ -84,6 +84,5 @@ contract PredictionMarket {
         require (_stakingTokenBalance > 0, "You have to buy staking token");  // Check that whether participant who bought staking token already or not
         // in progress      
     }
-                
 
 }
